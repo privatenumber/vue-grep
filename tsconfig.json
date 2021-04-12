@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"moduleResolution": "node",
+
+		// Target Node 12
+		"lib": ["ES2019"],
+		"target": "ES2019",
+	}
+}

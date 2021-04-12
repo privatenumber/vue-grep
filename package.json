@@ -1,0 +1,93 @@
+{
+	"name": "vue-grep",
+	"version": "0.0.0-semantic-release",
+	"description": "Grep your Vue codebase with query selector",
+	"keywords": [
+		"vue",
+		"vuejs",
+		"query",
+		"selector",
+		"grep",
+		"search",
+		"css"
+	],
+	"license": "MIT",
+	"repository": "privatenumber/vue-grep",
+	"funding": "https://github.com/privatenumber/vue-grep?sponsor=1",
+	"author": {
+		"name": "Hiroki Osame",
+		"email": "hiroki.osame@gmail.com"
+	},
+	"files": [
+		"bin/vue-grep.js",
+		"dist"
+	],
+	"bin": "bin/vue-grep.js",
+	"scripts": {
+		"test": "jest",
+		"start": "esno src/index.ts",
+		"lint": "eslint .",
+		"typecheck": "tsc --noEmit && :",
+		"build": "rm -rf dist && npm run build:query-parser && rollup -c",
+		"build:query-parser": "esno ./scripts/ts-peg.js src/lib/query-parser/parser.pegjs src/lib/query-parser/parser.ts"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,json,ts}": [
+			"eslint",
+			"npm run typecheck",
+			"jest --bail --findRelatedTests"
+		]
+	},
+	"devDependencies": {
+		"@nodelib/fs.walk": "^1.2.4",
+		"@pvtnbr/eslint-config-typescript": "^0.1.14",
+		"@rollup/plugin-commonjs": "^18.0.0",
+		"@rollup/plugin-node-resolve": "^11.2.1",
+		"@types/globalyzer": "^0.1.0",
+		"@types/globrex": "^0.1.0",
+		"@types/jest": "^26.0.22",
+		"@types/node": "^14.14.37",
+		"@vue/compiler-core": "^3.0.11",
+		"@vue/compiler-dom": "^3.0.11",
+		"cac": "^6.7.2",
+		"colorette": "^1.2.2",
+		"esbuild": "^0.11.6",
+		"esbuild-jest": "^0.5.0",
+		"eslint": "^7.23.0",
+		"esno": "^0.5.0",
+		"fs.promises.exists": "^1.0.0",
+		"globalyzer": "^0.1.4",
+		"globrex": "^0.1.2",
+		"husky": "^4.3.8",
+		"jest": "^26.6.3",
+		"lint-staged": "^10.5.4",
+		"parsel-js": "^1.0.1",
+		"pegjs": "^0.10.0",
+		"rollup": "^2.45.0",
+		"rollup-plugin-esbuild": "^3.0.2",
+		"ts-pegjs": "^0.3.1",
+		"typescript": "^4.2.4",
+		"vue-ast-utils": "^1.0.1"
+	},
+	"eslintConfig": {
+		"extends": "@pvtnbr/eslint-config-typescript",
+		"ignorePatterns": [
+			"src/lib/query-parser/parser.ts"
+		],
+		"rules": {
+			"unicorn/prevent-abbreviations": [
+				"error",
+				{
+					"replacements": {
+						"prop": false
+					}
+				}
+			]
+		}
+	}
+}
