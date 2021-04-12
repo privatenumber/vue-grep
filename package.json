@@ -1,7 +1,7 @@
 {
 	"name": "vue-grep",
 	"version": "0.0.0-semantic-release",
-	"description": "Grep your Vue codebase with query selector",
+	"description": "Grep your Vue.js codebase with query selector",
 	"keywords": [
 		"vue",
 		"vuejs",
