@@ -80,8 +80,8 @@ Search hidden files and directories.
 - Combinators
   - [`parent child`](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) - Descendant
   - [`parent > immediate-child`](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) - Immediate child
-  - [`element ~ sibling`](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) - General sibling
-  - [`element + adjacent`](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) - Adjacent sibling
+  - [`element ~ general-sibling`](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) - General sibling
+  - [`element + adjacent-sibling`](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) - Adjacent sibling
 
 ### Non-standard selectors
 - Directive selector
