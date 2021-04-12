@@ -10,7 +10,6 @@
   <a href="https://npm.im/vue-grep"><img src="https://badgen.net/npm/v/vue-grep"></a>
   <a href="https://npm.im/vue-grep"><img src="https://badgen.net/npm/dm/vue-grep"></a>
   <a href="https://packagephobia.now.sh/result?p=vue-grep"><img src="https://packagephobia.now.sh/badge?p=vue-grep"></a>
-  <a href="https://bundlephobia.com/result?p=vue-grep"><img src="https://badgen.net/bundlephobia/minzip/vue-grep"></a>
 </div>
 
 Have you ever wanted to [grep](https://phoenixnap.com/kb/grep-command-linux-unix-examples) your Vue.js codebase for something specific, like a combination of tags and attributes? Only to realize that you can't because attributes can span multiple lines and be in arbitrary order.
