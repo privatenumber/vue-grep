@@ -20,7 +20,7 @@ const cli = cac('vue-grep')
 	)
 	.option(
 		'--exclude-directory',
-		'Directory names to exclude on non-glob searches. Default: node_modules, vendor, public, dist',
+		'Directory names to exclude on non-glob searches.',
 		{
 			type: [String],
 			default: [
@@ -37,8 +37,12 @@ const cli = cac('vue-grep')
 	)
 	.help()
 	.version(packageJson.version)
-	.example('$ vue-grep template[v-if]')
-	.example('$ vue-grep slot[name=""]');
+	.example('$ vue-grep \'template[v-if]\' - find template element with v-if directive')
+	.example('$ vue-grep \'div:empty\' - find div elements with no children')
+	.example('$ vue-grep \':contains(/hello world/)\' - find elements that match regular expression pattern /hello world/')
+	.example('\nNeed help / report a bug?')
+	.example('https://github.com/privatenumber/vue-grep')
+	.example('');
 
 (async (argv) => {
 	const options = argv.options as CliOptions;
